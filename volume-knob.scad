@@ -19,7 +19,7 @@
  */
 
 
-knob_height = 0.560; // Approximate overall height, including the rounded front
+knob_height = 0.525; // Approximate overall height, including the rounded front
 cyl_height = 0.400;  // Approximate height of the cylindrical section
 knob_diameter = 0.691;
 
@@ -34,7 +34,7 @@ cutout_diameter = 0.500;             // Inside diameter of the cutout in the bac
 cutout_chamfer_max_diameter = 0.550; // Diameter of the chamfer at the far back
 cutout_chamfer_depth = 0.059;        // Depth of the chamfer at its narrowest
 
-stem_id = 0.205;    // Internal diameter of the stem that fits on the radio's actuator
+stem_id = 0.202;    // Internal diameter of the stem that fits on the radio's actuator
 stem_od = 0.35;    // Adjust to suit printer and material, within reason
 stem_inset = 0.170; // Distance between the back of the knob and the back of the stem
 stem_flat = 0.190;  // Chord length of the flat portion on the inside of the stem
