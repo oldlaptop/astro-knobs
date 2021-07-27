@@ -27,14 +27,14 @@ knob_diameter = 0.691;
  * If true, will render a 3D-printer-friendly chamfer in place of the spherical
  * section on the front.
  */
-knob_chamfer = false;
+knob_chamfer = true;
 knob_chamfer_frac = 0.5;
 
 cutout_diameter = 0.500;             // Inside diameter of the cutout in the back
 cutout_chamfer_max_diameter = 0.550; // Diameter of the chamfer at the far back
 cutout_chamfer_depth = 0.059;        // Depth of the chamfer at its narrowest
 
-stem_id = 0.200;    // Internal diameter of the stem that fits on the radio's actuator
+stem_id = 0.205;    // Internal diameter of the stem that fits on the radio's actuator
 stem_od = 0.35;    // Adjust to suit printer and material, within reason
 stem_inset = 0.170; // Distance between the back of the knob and the back of the stem
 stem_flat = 0.190;  // Chord length of the flat portion on the inside of the stem
