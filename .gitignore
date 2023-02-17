@@ -1,0 +1,11 @@
+# Build artifacts
+*.stl
+*.png
+
+# Other associated detritus
+*.gcode
+*.3mf
+
+# Editor droppings
+*~
+*.kate-swp
