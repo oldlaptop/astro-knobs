@@ -1,0 +1,7 @@
+This repository contains OpenSCAD models of various interior control knobs for a
+2004 Chevrolet Astro. For obvious reasons the selection is biased towards those
+that tend to break at around ($PRESENT_YEAR - 2004) years. It seems likely that
+at least some of these will fit other GM vehicles of the late '90s and early
+'00s, probably biased towards the earlier end of that range (the Astro interior
+was an old design by 2004). See comments in the individual source files for
+details on what they are.
