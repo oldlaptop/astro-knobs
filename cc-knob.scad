@@ -34,14 +34,13 @@ limiting_pin_z = 0.170;
 // Distance from the outer rim of the knob to the outer edge of the limiting pin
 limiting_pin_offset = 0.165;
 
-
-	/*
-	 * I did not end up modeling a narrow 'rim' around the back of the knob
-	 * I carefully measured on the original; perhaps this was meant to keep
-	 * light from leaking around the edge?
-	rim_thickness = 0.050,
-	rim_depth = 0.035,
-	 */
+/*
+ * I did not end up modeling a narrow 'rim' around the back of the knob
+ * I carefully measured on the original; perhaps this was meant to keep
+ * light from leaking around the edge?
+rim_thickness = 0.050,
+rim_depth = 0.035,
+ */
 
 rim_thickness = 0.050;
 rim_depth = 0.035;
@@ -61,25 +60,23 @@ grip_z = 0.40;
 $fn = 256;
 
 module cc_knob(
-	outer_dia = 1.250,
+	outer_dia = outer_dia,
 
-	limiting_pin_x = 0.155,
-	limiting_pin_y = 0.085,
-	limiting_pin_z = 0.170,
+	limiting_pin_x = limiting_pin_x,
+	limiting_pin_y = limiting_pin_y,
+	limiting_pin_z = limiting_pin_z,
+	limiting_pin_offset = limiting_pin_offset,
 
-	// Distance from the outer rim of the knob to the outer edge of the limiting pin
-	limiting_pin_offset = 0.165,
+	stem_od = stem_od,
+	stem_length = stem_length,
+	stem_id = stem_id,
+	stem_chord = stem_chord,
 
-	stem_od = 0.410,
-	stem_length = 0.500, // Not the "length" parameter to stem(), see body comment
-	stem_id = 0.205,
-	stem_chord = 0.165,
+	fascia_thickness = fascia_thickness,
 
-	fascia_thickness = 0.185,
-
-	grip_x = 0.33,
+	grip_x = grip_x,
 	grip_y = outer_dia,
-	grip_z = 0.40,
+	grip_z = grip_z,
 )
 {
 	union()
