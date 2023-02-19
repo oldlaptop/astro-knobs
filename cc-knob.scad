@@ -19,9 +19,10 @@
  *
  * On an FDM machine, I recommend placing the angled "nose" of the part facedown
  * on the print bed, which should allow the part to print with little or no
- * support. (I used a tiny bit near the bottom of the fascia, but I'm not sure
- * how much that actually did). Translucent material is suggested, given that
- * the original knob is illuminated.
+ * support. (I've tried using a tiny bit near where the fascia approaches the
+ * print bed, where the overhang is steepest, but I don't think that did
+ * anything.) Translucent material is suggested, given that the original knob is
+ * illuminated.
  */
 
 use <volume-knob.scad>
@@ -35,9 +36,9 @@ limiting_pin_z = 0.170;
 limiting_pin_offset = 0.165;
 
 /*
- * I did not end up modeling a narrow 'rim' around the back of the knob
- * I carefully measured on the original; perhaps this was meant to keep
- * light from leaking around the edge?
+ * I did not end up modeling this narrow 'rim' around the back of the knob that
+ * I carefully measured on the original; perhaps this was meant to keep light
+ * from leaking around the edge?
 rim_thickness = 0.050,
 rim_depth = 0.035,
  */
@@ -46,16 +47,24 @@ rim_thickness = 0.050;
 rim_depth = 0.035;
 
 stem_od = 0.410;
-stem_length = 0.500;
+stem_length = 0.450;
 
-stem_id = 0.205;
+/*
+ * These are very finicky, given that you want a tight friction fit - but not
+ * one that requires enough force to break things - on a shaft that's about
+ * 0.2in wide. Even the moisture content of PETG filament is believed to be able
+ * to make the difference between too tight and too loose for the same stem_id
+ * value. Planning to use the original metal liner may or may not make this more
+ * forgiving, but will require modestly larger values.
+ */
+stem_id = 0.203;
 stem_chord = 0.165;
 
 fascia_thickness = 0.185;
 
 grip_x = 0.33;
 grip_y = outer_dia;
-grip_z = 0.40;
+grip_z = 0.50;
 
 $fn = 256;
 
@@ -127,7 +136,7 @@ module limiting_pin(
 {
 	cube_x = x - y;
 
-	translate([0, -(offs - y), -z])
+	translate([0, -offs, -z])
 	{
 		color(pincolor)
 		{
